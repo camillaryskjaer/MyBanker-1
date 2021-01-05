@@ -7,6 +7,8 @@ namespace MyBanker
     class Mastercard : Card,IWithDraw
     {
         public List<int> Prefix { get; set; }
+        
+        //Denne metode kunne du godt gøre langt mere generel, så du ikke skal implementere denne for hver korttype
         public int MasterCardGen()
         {
             Prefix = new List<int> { 51, 52, 53, 54, 55 };
