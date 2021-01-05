@@ -67,6 +67,8 @@ namespace MyBanker
            AccountNumber =  RandomNumberGen(3520,10);// this method basically just says mynumber + fill 10 more random on the end
             return AccountNumber;
         }
+        
+        //Her bryder du med SOLID og Dependency inversion..... Superklasser må ikke vide noget om deres subklasser!!!!
         public string CardNumberGen(int startnumber)
         {//Checks the value of start number as the different cards has special lenght's
             int value = 0;
@@ -84,6 +86,10 @@ namespace MyBanker
             }
             return RandomNumberGen(startnumber,value);
         }
+        
+        
+            //Igen bryder du med SOLID og Dependency inversion..... Superklasser må ikke vide noget om deres subklasser!!!!
+  
         public string ExpiryDateGen(int startnumber)
         {
             DateTime datebase = new DateTime();
